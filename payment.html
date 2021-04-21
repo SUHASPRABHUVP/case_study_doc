@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <title>Payment</title>
+        <LINK REL ="stylesheet" TYPE="text/CSS" HREF="css/payment.css">
+        <script>
+            window.onload=function close(){
+                document.getElementById("creditcard").style.display="none"; 
+                document.getElementById("debitcard").style.display="none";
+                document.getElementById("upi").style.display="none"
+            }
+            function CREDITCARD() { 
+                document.getElementById("creditcard").style.display="block"; 
+                document.getElementById("debitcard").style.display="none";
+                document.getElementById("upi").style.display="none"; 
+            }
+            function DEBITCARD(){
+                document.getElementById("creditcard").style.display="none"; 
+                document.getElementById("debitcard").style.display="block";
+                document.getElementById("upi").style.display="none"
+            }
+            function UPI(){
+                document.getElementById("creditcard").style.display="none"; 
+                document.getElementById("debitcard").style.display="none"; 
+                document.getElementById("upi").style.display="block"; 
+            }
+            </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Payment</h1>
+        
+     
+        <table>
+            <tr>
+                <td>
+                    <label><b>Choose payment method</b></label>
+            </td>
+                <td>
+                    
+                 <button onclick="CREDITCARD()" class="ccbtn">CREDIT CARD</button>
+        
+                </td>
+                <td>
+                    <button onclick="DEBITCARD()"class="dcbtn">DEBIT CARD</button>
+        
+                </td>
+                <td>
+                    <button onclick="UPI()"class="upibtn">UPI</button>
+                </td>
+            </tr>
+        </table>
+        <form action="payment.html" method="post">
+            
+           
+             <div class="container">
+                 <table>
+                    <tr>
+                        <td>
+                            <label for="pname"><b>Patient name:</b></label>
+                        </td>
+                        <td>
+                            <p id="payname"></p>
+                        </td>
+                        <tr>
+                            <td>
+                                <label for="age"><b>Age:</b></label>
+                            </td>
+                            <td>
+                                <p id="payage"></p>
+                            </td>
+
+                        </tr>
+                        
+                        <td>
+                            <label for="gen"><b>Gender:</b></label>
+                        </td>
+                        <td>
+                            <p id="paygen"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dname"><b>Doctor name:</b></label>
+                        </td>
+                        
+                        <td>
+                            <p id="dname"></p>
+                        </td>
+                        <tr>
+                            <td>
+                                <label for="ds"><b>Doctor Specialization:</b></label>
+                            </td>
+                            <td>
+                                <p id="ds"></p>
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pris"><b>Priscription:</b></label>
+                        </td>
+                        <td>
+                            <p id="pris"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fee"><b>Fee:</b></label>
+                        </td>
+                        <td>
+                            <p id="fee"></p>
+                        </td>
+                    </tr>
+           </table>
+                    <div id="debitcard">
+                        <table>
+                        <tr>
+                            <td>
+                                <label for="fee"><b>Enter Debit Card Details</b></label>
+                            </tr>
+                            </td>
+                            
+                        <tr>
+                            
+                            <td>
+                                
+
+                                <label for="cname">Name on Card</label>
+                            </td>
+                            <td>
+                                
+                                <input type="text" id="dcname" name="dcardname" placeholder="suhas">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dcnum">Debit card number</label>
+                            </td>
+                            <td>
+                                <input type="text" id="dcnum" name="dcardnumber" placeholder="1111-2222-3333-4444">
+                            </td>
+                            
+            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="expmonth">Exp Month</label>
+            
+                            </td>
+                            <td>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            </td>
+                            <td>
+                                <label for="expyear">Exp Year</label>
+              
+                            </td>
+                            <td>
+                                <input type="text" id="expyear" name="expyear" placeholder="2021">
+                            </td>
+                            <td>
+                                <label for="cvv">CVV</label>
+                
+                            </td>
+                            <td>
+                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div id="creditcard">
+                       <table>
+                        <tr>
+                        <td>
+                            <label for="fee"><b>Enter Credit Card Details</b></label>
+                        </td>
+                       </tr>
+                        <tr>
+                            
+                            
+                            <td>
+                                
+
+                                <label for="cname">Name on Card</label>
+                            </td>
+                            <td>
+                                
+                                <input type="text" id="ccname" name="cardname" placeholder="suhas">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="ccnum">Credit card number</label>
+                            </td>
+                            <td>
+                                <input type="text" id="ccnum" name="ccardnumber" placeholder="1111-2222-3333-4444">
+                            </td>
+                            
+            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="expmonth">Exp Month</label>
+            
+                            </td>
+                            <td>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            </td>
+                            <td>
+                                <label for="expyear">Exp Year</label>
+              
+                            </td>
+                            <td>
+                                <input type="text" id="expyear" name="expyear" placeholder="2021">
+                            </td>
+                            <td>
+                                <label for="cvv">CVV</label>
+                
+                            </td>
+                            <td>
+                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div id="upi">
+                        <table>
+
+                      
+                        <tr>
+                            
+                            <td>
+                                <label for="fee"><b>Enter Upi Details</b></label>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            
+                            <td>
+                                
+
+                                <label for="cname">Name in UPI</label>
+                            </td>
+                            <td>
+                                
+                                <input type="text" id="cname" name="cardname" placeholder="suhas">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="ccnum">UPI number</label>
+                            </td>
+                            <td>
+                                <input type="text" id="upinum" name="upinumber" placeholder="1111222233@xyz">
+                            </td>
+                            
+            
+                        </tr>
+                    </table>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button type="button" class="paybtn" >Pay</button>
+                            </td>
+                            
+                        </tr>
+                    </table>
+           
+            </table>
+           
+           </form>
+           <button type="button" onclick="location.href='index.html'" class="hbtn" >Home</button>
+    </body>
+</html>
