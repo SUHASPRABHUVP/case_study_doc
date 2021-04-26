@@ -3,6 +3,7 @@
         <TITLE>Home Page</TITLE>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
+        <script src="js/indexapp.js"></script>
         <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -102,32 +103,32 @@
         <br/>
         <div id="appointment1">
                 <h3 id="appointment">APPOINTMENT FORM</h3>
-       <form action="index.html" >
+       <form action="index.html" name="appointment" >
             <table>
                 <tr>
                 <td>
         	        <label>Patient Name</label> 
                 </td>
                <td>
-                   <input type="text" placeholder="Enter Name here" name="name_box" required></td>
+                   <input type="text" placeholder="Enter Name here" name="pname_box" required></td>
                
                 </tr>
                 <tr>
                     <td> <label>Phone number</label> </td>
 
-                    <td><input type="num" placeholder="Enter Contact here" name="name_box" required>
+                    <td><input type="number" placeholder="Enter Contact here" name="phone_box" required>
                  </td></tr>
              
                 <tr>
                 <td>
                 	<label>E-Mail</label></td> 
                     
-           <td> <input type="E-Mail" placeholder="Enter email here" name="email_box" required></td>
+           <td> <input type="email" placeholder="Enter email here" name="email_box" required></td>
         </tr>
            
 
             <td> <label>Doctor </label></td>
-             <td>   <select>
+             <td>   <select name="doctors">
                         <option value="first">Neurologist</option>
                         <option value="third">Radiologist</option>
                         <option value="third">Psychologist</option>
@@ -137,11 +138,11 @@
                
                 <tr> <td><label>Preffered Dates</label><br></td>
                 
-                    <td><input type="date" name="start_date" required><br></td></tr>
+                    <td><input type="date" name="start_date"  required><br></td></tr>
                
                <tr>
                    <td><label for="appt">Select a time:</label></td>
-                   <td> <input type="time" id="appt" name="appt"></td>
+                   <td> <input type="time" id="appt" name="appt" min="9:00" max="22:00"></td>
                </tr>
                <tr>
                    <td>
@@ -155,7 +156,7 @@
                    </td>
                </tr>
         
-            <td><input type="Submit" name="submit" value="Register"class="regbtn"></td>
+            <td><input type="Submit" name="submit" value="Register"class="regbtn" onclick="validateappointment();"></td>
         	
         </table>
         </form>
@@ -169,7 +170,7 @@
     
       <div id="review">
         <h3>Review</h3>
-        <form>
+        <form name="review">
           <table>
 
             <tr>
@@ -178,7 +179,7 @@
 
               </td>
               <td>
-                <input type="text" placeholder="Enter Name here" name="name_box" required></td>
+                <input type="text" placeholder="Enter Name here" name="pcname_box" required></td>
               </td>
 
             </tr>
@@ -190,7 +191,7 @@
                 <textarea id="pc" name="pc" rows="4" cols="50"></textarea>
                </td>
             </tr>
-            <td><input type="Submit" name="comment" value="comment"class="cmtbtn"></td>
+            <td><input type="Submit" name="comment" value="comment"class="cmtbtn" onclick=" reviewvalidate();"></td>
 
           </table>
         </form>

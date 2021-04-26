@@ -1,10 +1,14 @@
 <HTML>
     <HEAD><TITLE>
         Registration
-    </TITLE></HEAD>
+    </TITLE>
+    <script src="js/reg.js">
+
+    </script>
+  </HEAD>
     <LINK REL="stylesheet" type="text/css" href="css/login.css">
     <body style="background-color:  rgb(134, 187, 236);">
-        <form action="reg.html" method="POST" class="signupForm" name="signupform">
+        <form action="reg.html" method="POST" class="signupForm" name="signupform" id="regform">
             <h2 style="text-align: center;"><b>Sign Up</b></h2>
             <ul class="noBullet">
               <li>
@@ -33,13 +37,13 @@
               </li>
 
                <fieldset><legend><b>Select Gender</b></legend>
-                 <input type="radio" id="gen" name="gender" value="male" required/> Male
-                 <input type="radio" id="gen" name="gender" value="female" required/> Female
-                 <input type="radio" id="gen" name="gender" value="other" required/> Others
+                 <input type="radio" id="gen" name="genderm" value="male" required/> Male
+                 <input type="radio" id="gen" name="genderfm" value="female" required/> Female
+                 <input type="radio" id="gen" name="gendero" value="other" required/> Others
                </fieldset>
               </li>
               <li id="center-btn">
-                <input type="submit" id="join-btn" name="join" alt="Join" value="Join" onclick="location.href='login.html'" >
+                <input type="submit" id="join-btn" name="join" alt="Join" value="Join" onclick="validate();" >
               </li>
             </ul>
           </form>

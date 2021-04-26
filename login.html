@@ -1,20 +1,23 @@
 <HTML>
-    <HEAD>  <TITLE>Login Page for Doctor Consultation</TITLE></HEAD>
+    <HEAD>  <TITLE>Login Page for Doctor Consultation</TITLE>
+    
+      <script src="js/login.js"></script> 
+    </HEAD>
     <LINK REL ="stylesheet" TYPE="text/CSS" HREF="css/login.css">
     <BODY style="background-color:  rgb(134, 187, 236);">
-        <form action="INDEX.html" method="post">
+        <form action="INDEX.html" method="post" id="loginform" >
            <div class="imgcontainer">
              <img src="images/login.jpg" alt="Avatar" class="avatar">
             </div>
           
             <div class="container">
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
           
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
           
-              <button type="submit" class="login" onclick="location.href='index.html'">Login</button>
+              <button type="button" class="login" onclick = "checkPasswordandName()" value="SUBMIT">Login</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
@@ -25,5 +28,7 @@
              
             </div>
           </form> 
+
+          
     </BODY>
 </HTML>
